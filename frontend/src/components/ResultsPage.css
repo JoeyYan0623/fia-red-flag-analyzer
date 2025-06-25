@@ -1,0 +1,129 @@
+.results-root {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.09);
+  }
+  
+  .results-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .results-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .results-convo-analysis {
+    font-size: 1.1rem;
+    background: #f5f8fa;
+    border-radius: 0.6rem;
+    padding: 1.2rem;
+    margin-bottom: 1.3rem;
+  }
+  
+  .player-type-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .player-type-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .player-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    background: #fafcff;
+    object-fit: contain;
+    border: 2px solid #e6e9f0;
+    box-shadow: 0 0 0.4rem #e3e3ee;
+  }
+  
+  .player-type-meta h3 {
+    font-size: 1.3rem;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .player-nickname {
+    color: #888;
+    margin-bottom: 0.25rem;
+    font-style: italic;
+  }
+  
+  .player-description {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .player-victim-emotions {
+    font-size: 1rem;
+    color: #a96b27;
+  }
+  
+  .dimension-score-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .dimension-score-card {
+    flex: 1 1 180px;
+    background: #f9fafc;
+    border-radius: 0.9rem;
+    border: 2.5px solid #e3e6ef;
+    padding: 1rem 0.7rem;
+    text-align: center;
+    min-width: 155px;
+    box-shadow: 0 1px 6px #f3f2f4;
+    transition: border 0.2s;
+  }
+  
+  .dim-icon {
+    font-size: 2.1rem;
+    margin-bottom: 0.2rem;
+  }
+  .dim-title {
+    margin-top: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .dim-score {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0.3rem;
+  }
+  .dim-info {
+    margin-top: 0.2rem;
+    font-size: 0.95rem;
+    cursor: help;
+  }
+  .dim-info-icon {
+    font-size: 1.1rem;
+    color: #a5a7b7;
+    margin-left: 0.15rem;
+  }
+  
+  .conversation-tips {
+    background: #eefbee;
+    border-left: 5px solid #48ad5c;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    font-size: 1.1rem;
+    color: #185b2b;
+  }
+  
+  @media (max-width: 680px) {
+    .results-root { padding: 0.5rem; }
+    .dimension-score-cards { flex-direction: column; }
+    .player-type-info { flex-direction: column; align-items: center; }
+  }
+  
