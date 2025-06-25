@@ -1,13 +1,14 @@
 // src/app/results/page.jsx
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useMemo, useEffect, useState } from "react";
 import Image from "next/image";
 import { RELATIONSHIP_DIMENSIONS } from "../../config/relationshipDimensions";
 import { PLAYER_TYPES } from "../../config/playerTypes";
 
-export default function ResultsPage() {
+function ResultsPageContent() {
   const params = useSearchParams();
   const router = useRouter();
   const dataParam = params.get("data");
@@ -260,7 +261,7 @@ export default function ResultsPage() {
               Continue building healthier relationships with more insights
             </p>
             <button 
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/')} 
               className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               Analyze Another Conversation
@@ -289,5 +290,13 @@ export default function ResultsPage() {
         }
       `}</style>
     </div>
+  );
+}
+
+export default function ResultsPage() {
+  return (
+    <Suspense fallback={<div>加载中...</div>}>
+      <ResultsPageContent />
+    </Suspense>
   );
 }
